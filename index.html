@@ -71,6 +71,23 @@
     </nav>
   </head>
   <body>
+    <div
+      aria-live="polite"
+      class="position-absolute w-100 d-flex flex-column p-5"
+    >
+      <div
+        class="toast"
+        style="position: absolute; top: 1; right: 0;"
+        data-delay="5000"
+      >
+        <div class="toast-body">
+          <a class="nav-link" href="storybook.html"></a>Checkout my
+            <strong class="mr-auto secondary-font">Storybook!</strong>
+            :)
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid fill">
       <div class="row align-items-center fill">
         <div class="col-6 d-flex flex-column">
@@ -92,8 +109,33 @@
             </div>
           </div>
         </div>
-        <div class="col-6 align-self-center">
-          <img src="assets/img/crucible-icon.svg" alt="Under the microscope" />
+        <div class="col-6 align-self-center multiple-icon-row">
+          <div class="row">
+            <div class="col-6">
+              <img
+                src="assets/img/crucible-icon.svg"
+                alt="Under the microscope"
+              />
+            </div>
+            <div class="col-6 img-overlap">
+              <img
+                src="assets/img/bacteria-1-icon.svg"
+                alt="Under the microscope"
+              />
+            </div>
+            <div class="col-6 img-overlap-2">
+              <img
+                src="assets/img/bacteria-2-icon.svg"
+                alt="Under the microscope"
+              />
+            </div>
+            <div class="col-6 img-overlap-2">
+              <img
+                src="assets/img/bacteria-3-icon.svg"
+                alt="Under the microscope"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -115,5 +157,10 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function() {
+        $(".toast").toast("show");
+      });
+    </script>
   </body>
 </html>

@@ -2,6 +2,30 @@
   font-family: "smoothie_shopperegular";
 }
 
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+.navbar {
+  background-color: #fbf8e9;
+}
+
 html,
 body {
   background-color: #fbf8e9;
@@ -25,14 +49,110 @@ body {
 }
 
 #img-spin {
-  -webkit-animation: rotation 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
 
-@-webkit-keyframes rotation {
+@keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(359deg);
+  }
+}
+
+.multiple-icon-row {
+  position: relative;
+}
+
+.img-overlap {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+
+  animation: move 10s infinite;
+  animation: shake 10s infinite;
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(2deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  30% {
+    top: 5px;
+  }
+  50% {
+    left: 5px;
+  }
+  75% {
+    bottom: 5px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.img-overlap-2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+
+  animation: move-2 10s infinite;
+  animation: shake-2 10s infinite;
+}
+
+@keyframes shake-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(2deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes move-2 {
+  0% {
+    right: 0;
+  }
+  30% {
+    bottom: 5px;
+  }
+  50% {
+    right: 5px;
+  }
+  75% {
+    top: 5px;
+  }
+  100% {
+    right: 0;
   }
 }
