@@ -17,6 +17,11 @@ svg:hover {
   font-family: "smoothie_shopperegular";
 }
 
+.btn-warning {
+  background-color: #fff8bf;
+  border-color: #fff8bf;
+}
+
 .social-link {
   width: 30px;
   height: 30px;
@@ -187,7 +192,6 @@ body {
 
 .top-panel::before {
   content: "╲╱";
-  color: #fff;
   position: absolute;
   opacity: 0.8;
   text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
